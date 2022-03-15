@@ -2,7 +2,7 @@
 
 Name:                os-maven-plugin
 Version:             1.2.3
-Release:             1
+Release:             2
 Summary:             Maven plugin for generating platform-dependent properties
 License:             ASL 2.0
 URL:                 https://github.com/trustin/os-maven-plugin/
@@ -10,6 +10,7 @@ BuildArch:           noarch
 Source0:             https://github.com/trustin/%{name}/archive/%{name}-%{version}.Final.tar.gz
 
 Patch0:              0001-Port-to-current-plexus-utils.patch
+Patch1:              Add_support_for_RISC-V_arch.patch
 
 BuildRequires:       maven-local mvn(junit:junit) mvn(org.apache.maven:maven-core)
 BuildRequires:       mvn(org.apache.maven:maven-plugin-api)
@@ -59,5 +60,8 @@ find -name plugin.xml -delete
 %doc LICENSE.txt
 
 %changelog
+* Thu Mar 17 2022 xiaoqian lv <xiaoqian@nj.iscas.ac.cn> - 1.2.3-2
+- Add support for RISC-V arch
+
 * Wed Jul 29 2020 wangxiao <wangxiao65@huawei.com> - 1.2.3-1
 - package init
