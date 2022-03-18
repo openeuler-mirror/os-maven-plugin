@@ -1,0 +1,12 @@
+--- a/src/main/java/kr/motd/maven/os/Detector.java	2014-05-27 03:19:32.000000000 +0800
++++ b/src/main/java/kr/motd/maven/os/Detector.java	2022-03-15 16:04:21.444709900 +0800
+@@ -133,6 +133,9 @@
+         if (value.equals("ppc64")) {
+             return "ppc_64";
+         }
++        if (value.equals("riscv64")) {
++            return "riscv64";
++        }
+ 
+         return UNKNOWN;
+     }
